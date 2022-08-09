@@ -1,0 +1,50 @@
+<%- include("partials/header") -%>
+
+
+
+
+    <!-- <div class="container">
+    <h1>Home Page</h1>
+    <div class="row">
+        <div class=" col-lg-7 top-section">
+                  
+            <p class="intro">
+                <%= homeContent %>
+            </p>
+        </div>
+        <div class=" col-lg-4 img-div">
+            
+        </div>
+    </div>
+          -->
+
+    <h1>Home</h1>
+    <p class="intro">
+        <%= homeContent %>
+    </p>
+    <% posts.forEach(function(post){ %>
+        <h2>
+            <%= post.title%>
+        </h2>
+
+        <p>
+            <%=post.desc.substring(0,100)+" ...." %> <a href="/posts/<%=post.title%>">See More</a>
+        </p>
+        <%})%>
+
+
+
+
+
+            <%- include("partials/footer") -%>
+
+                <!-- 
+            <% posts.forEach(function(post){ %>
+                <h2>
+                    <%= post.title%>
+                </h2>
+            
+                <p><%=post.desc.substring(0,100)+"  ...." %> <a href="/posts/<%=post.title%>">See More</a> </p>
+                
+        
+                <%})%> -->
